@@ -44,7 +44,7 @@ function formatFile(name, contents) {
   switch (extension) {
     case 'md': 
       return markdown.toHTML(contents);
-    case 'html':
+    case 'html':;
       return contents;
   }
 }
