@@ -4,6 +4,11 @@ const app      = express();
 const port     = 3000;
 const axios    = require('axios');
 
+axios.interceptors.request.use(request => {
+  console.log(`${request.method} - ${request.url}`);
+  return request
+})
+
 const blogUrl = 'https://api.github.com/repos/siriusastrebe/gitblog/contents/blogs'
 const params  = '?ref=master'
 
