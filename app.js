@@ -44,7 +44,7 @@ async function getRemoteDirectory(url) {
     await file.close();
 
     cacheExists = true;
-    if ((new Date().getTime() - stat.mtime) < 60000) {
+    if ((new Date().getTime() - stat.mtime) < 6000) {
       defaultToCache = true;
     }
   } catch {
