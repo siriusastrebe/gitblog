@@ -3,7 +3,6 @@ const express       = require('express');
 const app           = express();
 const port          = 3000;
 const axios         = require('axios');
-const sha1          = require('sha1');
 const fs            = require('fs');
 const child_process = require('child_process');
 
@@ -121,7 +120,7 @@ function HTMLFormat(posts, metadatas) {
   });
 
   html += "</body>";
-  html += "<style type=\"text/css\">body{margin:40px auto;max-width:800px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1,h2,h3{line-height:1.2}pre{background:lightyellow;overflow:scroll}</style>";
+  html += "<style type=\"text/css\">body{margin:40px auto;max-width:800px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1,h2,h3{line-height:1.2}pre{background:lightyellow;overflow:scroll;padding:0 20px}</style>";
   html += "</html>";
   return html;
 }
